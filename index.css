@@ -1,0 +1,39 @@
+/* Impostazioni generali per il body */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #070c32;
+    overflow: hidden; /* Evita lo scroll se l'immagine è più grande della vista */
+}
+
+/* Stile per il contenitore dell'immagine di sfondo */
+#background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/stemma.png'); /* Inserisci qui il percorso della tua immagine */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    animation: fadeIn 3s forwards; /* Applicazione dell'animazione */
+}
+
+/* Stile per le aree cliccabili */
+.clickable-area {
+    position: absolute;
+    width: 500px; /* Regola la dimensione dell'area cliccabile */
+    height: 80px; /* Regola la dimensione dell'area cliccabile */
+    cursor: pointer;
+     /* Solo per debugging, rimuovi in produzione */
+}
+
+/* Definizione dell'animazione di dissolvenza */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gioco dell'Oca Interattivo</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #9AC24B;
+            overflow: hidden; /* Nasconde lo scroll */
+        }
+
+        #map-container {
+            position: relative;
+            width: 100%;
+            max-width: 1310px; /* Imposta la larghezza massima dell'immagine */
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #game-map {
+            width: 100%;
+            height: auto;
+            object-fit: contain; /* Mantiene le proporzioni senza distorcere l'immagine */
+            display: block;
+        }
+
+        .map-hotspot {
+            position: absolute;
+            cursor: pointer;
+            border: 2px solid transparent; /* Solo per scopi di debug, rimuovere in produzione */
+        }
+
+        /* Aggiungi gli stili specifici per ogni hotspot */
+        .hotspot-1 { top: 5%; left:1%; width: 10%; height: 10%; }
+        .hotspot-2 { top: 19.5%; left: 5.5%; width: 11.3%; height: 10.9%; }
+        .hotspot-3 { top: 5.9%; left: 23.5%; width: 10%; height: 11%; }
+        .hotspot-4 { top: 23%; left: 53.6%; width: 14.3%; height: 11%; }
+        .hotspot-5 { top: 2%; left: 67%; width: 12%; height: 12.7%; }
+        .hotspot-6 { top: 20%; left: 84%; width: 15.4%; height: 14.5%; }
+        .hotspot-7 { top: 67.3%; left: 2%; width: 11%; height: 11%; }
+        .hotspot-8 { top: 83.4%; left: 0.5%; width: 11%; height: 13.7%; }
+        .hotspot-9 { top: 84%; left: 21.3%; width: 13%; height: 11%; }
+        .hotspot-10 { top: 49%; left: 48%; width: 10%; height: 12%; }
+        .hotspot-11 { top: 40%; left: 60%; width: 9%; height: 10%; }
+        .hotspot-12 { top: 55%; left: 67%; width: 10%; height: 10%; }
+        .hotspot-13 { top: 39.3%; left: 73.3%; width: 10.5%; height: 10.8%; }
+        .hotspot-14 { top: 73%; left: 52.3%; width: 13.7%; height: 11%; }
+        .hotspot-15 { top: 49%; left: 85%; width: 13.8%; height: 15.5%; }
+        .hotspot-16 { top: 86%; left: 65.3%; width: 12.3%; height: 10%; }
+        .hotspot-17 { top: 83%; left: 84.9%; width: 12.8%; height: 15.5%; }
+    </style>
+</head>
+<body>
+    <div id="map-container">
+        <img id="game-map" src="images/tabellone gioco G4BSA_prova.png" alt="Mappa del Gioco dell'Oca">
+        <div class="map-hotspot hotspot-1" data-link="pagina1.html"></div>
+        <div class="map-hotspot hotspot-2" data-link="pagina2.html"></div>
+        <div class="map-hotspot hotspot-3" data-link="pagina3.html"></div>
+        <div class="map-hotspot hotspot-4" data-link="pagina3.html"></div>
+        <div class="map-hotspot hotspot-5" data-link="pagina3.html"></div>
+        <div class="map-hotspot hotspot-6" data-link="pagina3.html"></div>
+        <div class="map-hotspot hotspot-7" data-link="pagina3.html"></div>
+        <div class="map-hotspot hotspot-8" data-link="pagina3.html"></div>
+        <div class="map-hotspot hotspot-9" data-link="pagina3.html"></div>
+        <div class="map-hotspot hotspot-10" data-link="scientifico_tradizionale.html"></div>
+        <div class="map-hotspot hotspot-11" data-link="pagina3.html"></div>
+        <div class="map-hotspot hotspot-12" data-link="pagina3.html"></div>
+        <div class="map-hotspot hotspot-13" data-link="pagina3.html"></div>
+        <div class="map-hotspot hotspot-14" data-link="pagina3.html"></div>
+        <div class="map-hotspot hotspot-15" data-link="pagina3.html"></div>
+        <div class="map-hotspot hotspot-16" data-link="pagina3.html"></div>
+        <div class="map-hotspot hotspot-17" data-link="pagina3.html"></div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.map-hotspot').forEach(hotspot => {
+            hotspot.addEventListener('click', function() {
+                window.location.href = this.dataset.link;
+            });
+        });
+    </script>
+</body>
+</html>
