@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Il Santo di Pollena Trocchia</title>
+    <link rel="stylesheet" href="stile_quiz.css">
+</head>
+<body>
+    <header class="content-header">
+        <h1>Quiz sul Santo di Pollena Trocchia</h1>
+    </header>
+
+    <main class="content-main">
+        <section class="quiz-section">
+            <h2>Domanda in Rima</h2>
+            <p class="question">
+                Chi è il santo di Pollena Trocchia,<br>
+                famoso per la sua gloria,<br>
+                con il suo nome inizia la festa,<br>
+                piena di gioia e storia?
+            </p>
+
+            <form id="quiz-form">
+                <label>
+                    <input type="radio" name="answer" value="A"> A) San Gennaro
+                </label><br>
+                <label>
+                    <input type="radio" name="answer" value="B"> B) San Giacomo
+                </label><br>
+                <label>
+                    <input type="radio" name="answer" value="C"> C) San Giuseppe
+                </label><br>
+                <label>
+                    <input type="radio" name="answer" value="D"> D) San Francesco
+                </label><br>
+
+                <button type="button" onclick="checkAnswer()">Invia Risposta</button>
+            </form>
+
+            <p id="result" class="hidden"></p>
+            <a id="next-page-btn" href="pagina_successo.html" class="hidden next-btn">Vai alla prossima pagina</a>
+        </section>
+    </main>
+
+    <footer class="content-footer">
+        <a href="index.html" class="back-btn">Torna alla Home</a>
+    </footer>
+
+    <script>
+        function checkAnswer() {
+            let selectedAnswer = document.querySelector('input[name="answer"]:checked');
+            let resultText = document.getElementById("result");
+            let nextPageBtn = document.getElementById("next-page-btn");
+
+            if (selectedAnswer) {
+                if (selectedAnswer.value === "B") {
+                    resultText.innerHTML = "✅ Esatto! Il santo di Pollena Trocchia è San Giacomo!";
+                    resultText.style.color = "green";
+                    resultText.classList.remove("hidden");
+                    nextPageBtn.classList.remove("hidden"); // Mostra il pulsante per la prossima pagina
+                } else {
+                    resultText.innerHTML = "❌ Sbagliato! La risposta corretta era: San Giacomo.";
+                    resultText.style.color = "red";
+                    resultText.classList.remove("hidden");
+                    nextPageBtn.classList.remove("hidden"); // Nasconde il pulsante se la risposta è errata
+                }
+            } else {
+                alert("Seleziona una risposta prima di inviare!");
+            }
+        }
+    </script>
+</body>
+</html>
