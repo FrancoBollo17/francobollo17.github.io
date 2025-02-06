@@ -111,7 +111,7 @@ h3{
 
 .image-grid img {
     width: 100%;  /* La larghezza si adatta alla colonna */
-    height: 120%;  /* L'altezza si adatta per mantenere la proporzione */
+    height: 121%;  /* L'altezza si adatta per mantenere la proporzione */
     object-fit: cover; /* Fissa l'immagine senza deformarla, adattandola alla larghezza */
     border-radius: 8px;  /* Aggiungi angoli arrotondati, se desiderato */
 }
