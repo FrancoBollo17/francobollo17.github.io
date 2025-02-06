@@ -31,7 +31,14 @@ body {
     border: 2px solid transparent; /* Solo per scopi di debug, rimuovere in produzione */
 }
 
-
+#click-text {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    animation: fadeIn 3s forwards;
+}
 /* Definizione dell'animazione di dissolvenza */
 @keyframes fadeIn {
     to {
