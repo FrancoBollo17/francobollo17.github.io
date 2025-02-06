@@ -24,10 +24,12 @@ body {
 
 /* Stile per le aree cliccabili */
 .clickable-area {
-    position: absolute;
-    width: 500px; /* Regola la dimensione dell'area cliccabile */
-    height: 80px; /* Regola la dimensione dell'area cliccabile */
-    cursor: pointer;
+            position: absolute;
+            width: 10vw; /* Larghezza dell'area cliccabile */
+            height: 10vh; /* Altezza dell'area cliccabile */
+            top: 82.5vh;
+            left: 35vw;
+            cursor: pointer;
     border: 2px solid red;
      /* Solo per debugging, rimuovi in produzione */
 }
