@@ -8,16 +8,15 @@
 </head>
 <body>
     <!-- Contenitore per l'immagine con effetto di dissolvenza -->
-    <div id="background-image"></div>
-    
-    <!-- Aree cliccabili -->
-    <div class="clickable-area" onclick="navigateTo('mappa.html')"></div>
-    <!-- Aggiungi altre aree cliccabili come necessario -->
-
+    <div id="map-container">
+        <img id="game-map" src="images/stemmone.png" alt="Mappa del Gioco dell'Oca">
+        <div class="map-hotspot hotspot-1" data-link="mappa.html"></div>
     <script>
-        function navigateTo(url) {
-            window.location.href = url;
-        }
+        document.querySelectorAll('.map-hotspot').forEach(hotspot => {
+            hotspot.addEventListener('click', function() {
+                window.location.href = this.dataset.link;
+            });
+        });
     </script>
 </body>
 </html>
