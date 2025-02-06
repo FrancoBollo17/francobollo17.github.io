@@ -28,6 +28,7 @@ body {
     width: 500px; /* Regola la dimensione dell'area cliccabile */
     height: 80px; /* Regola la dimensione dell'area cliccabile */
     cursor: pointer;
+    border: 10px;
      /* Solo per debugging, rimuovi in produzione */
 }
 
