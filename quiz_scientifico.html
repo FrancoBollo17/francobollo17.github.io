@@ -39,6 +39,7 @@
             </form>
 
             <p id="result" class="hidden"></p>
+            <button id="next-page" class="hidden" onclick="nextPage()">Vai alla prossima pagina</button>
         </section>
     </main>
 
@@ -56,16 +57,19 @@
                 if (selectedAnswer.value === "C") {
                     resultText.innerHTML = "✅ Esatto! La risposta giusta è il Liceo Scientifico!";
                     resultText.style.color = "green";
-                    nextPageBtn.classList.remove("hidden"); // Mostra il pulsante per andare alla prossima pagina
                 } else {
                     resultText.innerHTML = "❌ Sbagliato! La risposta corretta era: Liceo Scientifico.";
                     resultText.style.color = "red";
-                    nextPageBtn.classList.remove("hidden"); // Nasconde il pulsante se la risposta è sbagliata
                 }
                 resultText.classList.remove("hidden");
+                nextPageBtn.classList.remove("hidden"); // Mostra il pulsante per andare alla prossima pagina
             } else {
                 alert("Seleziona una risposta prima di inviare!");
             }
+        }
+
+        function nextPage() {
+            // Azioni per la prossima pagina (aggiungi il codice necessario per navigare alla prossima pagina)
         }
     </script>
 </body>
