@@ -1,47 +1,4 @@
-/* Centrare l'elemento di traduzione */
-#google_translate_element {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  background-color: #f5f5f5; /* Colore di sfondo */
-  border-radius: 5px; /* Angoli arrotondati */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera */
-  width: auto;
-  max-width: 500px; /* Impostare una larghezza massima */
-}
 
-/* Stilizzare il dropdown del traduttore */
-.goog-te-banner-frame {
-  display: none !important;
-}
-
-.goog-te-menu-value {
-  background-color: #ff9900; /* Colore di sfondo del menu */
-  color: white; /* Colore del testo */
-  border-radius: 5px; /* Angoli arrotondati */
-  padding: 5px;
-  font-size: 14px; /* Dimensione del testo */
-}
-
-.goog-te-menu2 {
-  border-radius: 5px; /* Angoli arrotondati */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Ombra leggera */
-}
-
-.goog-te-menu2 .goog-te-menu-item {
-  padding: 8px;
-  font-size: 14px;
-  background-color: #ffffff; /* Colore di sfondo dei menu */
-}
-
-.goog-te-menu2 .goog-te-menu-item:hover {
-  background-color: #f0f0f0; /* Colore di sfondo quando si passa sopra */
-}
-
-.goog-te-banner-frame.skiptranslate {
-  display: none !important;
-}
 
 body {
     font-family: 'Open Sans', sans-serif;
